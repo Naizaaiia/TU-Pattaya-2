@@ -1,5 +1,5 @@
 <?php
-	$con = mysqli_connect("localhost","root","12345","cn342") or die("äÁèÊÒÁÒÃ¶àª×èÍÁµèÍ°Ò¹¢éÍÁÙÅä´é");
+	$con = mysqli_connect("localhost","root","","cn342") or die("æ·žæž‹ä¼Šé¢å¤šî€¶æŸ°æ‹æŸ°è€™è€¿æ©¥ä¸´é…æ’®");
 	//echo "Connect Successful";
 	
 
