@@ -14,6 +14,6 @@
 	echo"success";
 	echo "<script> window.location.assign('TableNewEN.php'); </script>";
 	}else{
-		echo "เกิดข้อผิดพลาด".mysqli_error($con);
+	echo "เกิดข้อผิดพลาด".mysqli_error($con);
 	}
 ?>
