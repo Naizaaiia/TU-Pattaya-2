@@ -25,6 +25,5 @@
 	}else{
 		echo mysqli_error($con);
 	}
-	
 
 ?>
