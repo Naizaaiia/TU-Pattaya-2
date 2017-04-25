@@ -15,7 +15,6 @@
 	$Detail4 =$_POST['Detail4'];
 	$Detail5 =$_POST['Detail5'];
 	
-	
 	$sql="insert into autoen(Header1,Header2,Header3,Header4,Header5,Header6,Detail1,Detail2,Detail3,Detail4,Detail5,Image) values('$Header1','$Header2','$Header3','$Header4','$Header5','$Header6','$Detail1','$Detail2','$Detail3','$Detail4','$Detail5','$Image')";
 	$result=mysqli_query($con,$sql);
 	
