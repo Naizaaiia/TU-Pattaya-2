@@ -5,7 +5,6 @@
 	
 	$Header =$_POST['Header'];
 	$Detail =$_POST['Detail'];
-
 	$id_select=$_POST['id_select'];
 	$sql="update histen set Header='$Header',Detail='$Detail' where id=$id_select";
 	$result=mysqli_query($con,$sql);
