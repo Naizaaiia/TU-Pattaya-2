@@ -5,8 +5,7 @@
 	$Image = $_FILES['image']['name'];
 	$Header =$_POST['Header'];
 	$Detail =$_POST['Detail'];
-	
-	
+
 	$sql="insert into homeen(Header,Detail,Image) values('$Header','$Detail','$Image')";
 	$result=mysqli_query($con,$sql);
 	
