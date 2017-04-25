@@ -84,7 +84,7 @@
   <!--End Slider-->
 <?php
 	
-	$db = mysqli_connect("localhost","root","","cn342");
+	require'./dbConnect.php';
 				$sql = "SELECT *FROM histen";
 				$result = mysqli_query($db, $sql);
 				
@@ -95,8 +95,9 @@
 						echo "<div class='ui1_box'>";
 							echo "<div class='ui1_box__inner'>";
 							echo "<h2>".$row['Header']."</h2><br>";
-							
-						echo "<pre><p>".$row['Detail']."</p></pre><br><br>";
+						
+						echo "<p>".$row['Detail']."</p><br><br>";
+						
 						echo "</div>";
 						echo "</div>";
 						echo "</div>";
@@ -104,8 +105,6 @@
 					
 				}
 			?> 
-  
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="JS/slider.js"></script>
   <script src="JS/textBox.js"></script>
