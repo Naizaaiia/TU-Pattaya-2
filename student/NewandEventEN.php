@@ -84,12 +84,14 @@
   <!--End Slider-->
   <br><br><br>
 
-  <h2 class="admi">New & Event</h2>
+  <h1>
+       &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; New & Event
+      </h1>
   <br><br><br>
  
  <?php
 	
-	$db = mysqli_connect("localhost","root","","cn342");
+	require'./dbConnect.php';
 				$sql = "SELECT *FROM newen ORDER BY id DESC";
 				$result = mysqli_query($db, $sql);
 				
@@ -101,14 +103,13 @@
 							echo "<div class='ui1_box'>";
 								echo "<div class='ui1_box__inner'>";
 									echo "<h2>".$row['Header']."</h2><br>";
-									echo "<img class='newsandeventgalleryBox' src = 'name/".$row['Image']."> 
+									echo "<img src = 'name/".$row['Image']."' width='250px' height='250px;'> 
 									<div id='inner'>";
 										echo "<p>".$row['Detail']."</p>";
 										echo "<input type='hidden' name='IDnew' value='".$row['id']."'>";
-                    echo "<button type='submit' value='read'>Submit</button>";
 										echo "</div><br><br>";
 								
-										
+										echo "<button type='submit' value='read'>Submit</button>";
 								
 								echo "</div>";
 							echo "</div>";
