@@ -32,6 +32,7 @@
   <li><a href="../LoginHome/logout.php">Logout</a></li>
   
 </ul>
+		
 
 <div style="margin-left:25%;padding:1px 16px;height:1000px;">
 	
