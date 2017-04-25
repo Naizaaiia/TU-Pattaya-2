@@ -99,22 +99,20 @@
 				
 				
 					echo "<div class='ui1'>";
-						echo "<form action='NewEN.php' method='get'>";
-							echo "<div class='ui1_box'>";
-								echo "<div class='ui1_box__inner'>";
-									echo "<h2>".$row['Header']."</h2><br>";
-									echo "<img src = 'name/".$row['Image']."' width='250px' height='250px;'> 
-									<div id='inner'>";
-										echo "<p>".$row['Detail']."</p>";
-										echo "<input type='hidden' name='IDnew' value='".$row['id']."'>";
-										echo "</div><br><br>";
-								
-										echo "<button type='submit' value='read'>Submit</button>";
-								
-								echo "</div>";
-							echo "</div>";
-						echo "</form>";
-					echo "</div>";
+            echo "<form action='NewEN.php' method='get'>";
+              echo "<div class='ui1_box'>";
+                echo "<div class='ui1_box__inner'>";
+                  echo "<h2>".$row['Header']."</h2><br>";
+                  echo "<img class='newsandeventgalleryBox' src = 'name/".$row['Image']."' width='100px' height='100px;'>";
+                    echo "<p>".$row['Detail']."<div id='inner'></p>";
+                    echo "<button type='submit' value='read'>อ่านต่อ</button>";
+                    echo "<input type='hidden' name='IDnew' value='".$row['id']."'>";
+                    echo "</div><br><br>";
+
+                echo "</div>";
+              echo "</div>";
+            echo "</form>";
+          echo "</div>";
 						
 					
 				}
