@@ -1,4 +1,4 @@
-﻿<!-- <!DOCTYPE html> -->
+<!-- <!DOCTYPE html> -->
 <html>
 
 <head>
@@ -89,16 +89,15 @@
       <h2>
        <?php
 	
-	$db = mysqli_connect("localhost","root","","cn342");
+	require'./dbConnect.php';
 				$sql = "SELECT *FROM addren";
 				$result = mysqli_query($db, $sql);
 				
 				while(($row = mysqli_fetch_array($result))){
-
+				
 								echo "<h2>".$row['Header']."</h2><br>";
 								echo "<p>".$row['Detail']."</p><br><br>";
-		
-					
+	
 				}
 			?> 
       </h2>
