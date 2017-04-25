@@ -9,54 +9,54 @@
 </head>
 <body>
 
-<!--manu bar-->
-<div class="tavi">
-  <div class="logoTU">
-    <a href="mainEN.php">
+  <!--manu bar-->
+  <div class="tavi">
+    <div class="logoTU">
+      <a href="mainEN.php">
         <br><img src="image/iconTU.jpg" style="width: 70px;height: 70px;">
       </a>
-    <div class="langTH">
-      <a href="AdminstrativeBoardTH.php">
-        <img src="image/iconTH2.png" alt="Thailand" style="width: 40px;height: 30px;">
-      </a>
-      <div class="langEN">
-        <a href="AdminstrativeBoardEN.php">
-          <img src="image/iconEN2.png" alt="Thailand" style="width: 40px;height: 30px;">
-      </a>
+      <div class="langTH">
+        <a href="AdminstrativeBoardTH.php">
+          <img src="image/iconTH2.png" alt="Thailand" style="width: 40px;height: 30px;">
+        </a>
+        <div class="langEN">
+          <a href="AdminstrativeBoardEN.php">
+            <img src="image/iconEN2.png" alt="Thailand" style="width: 40px;height: 30px;">
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-  <h6>Faculty of Engineering Thammasart University Pattaya Campus</h6>
-  <p class="ma">คณะวิศวกรรมศาสตร์ มหาวิทยาลัยธรรมศาสตร์ ศูนย์พัทยา</p>
+    <h6>Faculty of Engineering Thammasart University Pattaya Campus</h6>
+    <p class="ma">คณะวิศวกรรมศาสตร์ มหาวิทยาลัยธรรมศาสตร์ ศูนย์พัทยา</p>
 
-  <a href="NewandEventEN.php" class="selected">NEW AND EVENTS</a>
+    <a href="NewandEventEN.php" class="selected">NEW AND EVENTS</a>
 
-  <a href="DepartmentEN.php" class="nav">DEPARTMENT</a>
+    <a href="DepartmentEN.php" class="nav">DEPARTMENT</a>
 
-  <li class="dropdown" >
-    <a class="nav" >PROGRAMS</a>
-    <div class="dropdown-content" >
-    <a href="ProgramSoftEN.php" >SOFTWARE ENGINEER</a>
-    <a href="ProgramAutoEN.php" >AUTOMOTIVE ENGINEER</a>
-    </div>
-  </li>
-
-  <a href="Student'sLifeEN.php" class="nav">STUDENT'S LIFE</a>
-
-  <li class="dropdown">
-    <a class="navi">ABOUT</a>
-    <div class="dropdown-content" >
-    <a href="HistoryEN.php" >HISTORY</a>
-    <a href="AdminstrativeBoardEN.php" >ADMINSTRATIVE BOARD</a>
-    <a href="AddressAndMapEN.php" >ADDRESS AND MAP</a>
-    </div>
+    <li class="dropdown" >
+      <a class="nav" >PROGRAMS</a>
+      <div class="dropdown-content" >
+        <a href="ProgramSoftEN.php" >SOFTWARE ENGINEER</a>
+        <a href="ProgramAutoEN.php" >AUTOMOTIVE ENGINEER</a>
+      </div>
     </li>
 
-  <a href="mainEN.php" class="nav">HOME</a>
- </div>
-<!--End manu bar-->
+    <a href="Student'sLifeEN.php" class="nav">STUDENT'S LIFE</a>
 
-<!--Slider-->
+    <li class="dropdown">
+      <a class="navi">ABOUT</a>
+      <div class="dropdown-content" >
+        <a href="HistoryEN.php" >HISTORY</a>
+        <a href="AdminstrativeBoardEN.php" >ADMINSTRATIVE BOARD</a>
+        <a href="AddressAndMapEN.php" >ADDRESS AND MAP</a>
+      </div>
+    </li>
+
+    <a href="mainEN.php" class="nav">HOME</a>
+  </div>
+  <!--End manu bar-->
+
+  <!--Slider-->
   <div class="parent">
     <div class="slider">
       <ul class="slider-ul">
@@ -81,48 +81,48 @@
   </div>
   <!--End Slider-->
 
- 	 <br><br><br><br>
-	<h2 class="admi">Administrators
+  <br><br><br><br>
+  <h2 class="adminstrativethai1">Administrators</h2>
+  <?php
+
+  require'./dbConnect.php';
+  $sql = "SELECT *FROM admien";
+  $result = mysqli_query($db, $sql);
+
+  while($row = mysqli_fetch_array($result)){
+
+
+    echo "<div class='ui1'>";           
+    echo "<div class='ui1_box'>";
+    echo "<div class='ui1_box__inner'>";
+
+    echo "<img class='galleryBox3' src = 'name/".$row['Image']."' width='250px' height='250px;'>
+    <div class='adminstrativethai2'>";
+
+     echo "<p>".$row['Header']."</p><br>";
+     echo "<p>".$row['Detail']."</p>";
+
+     echo "</div><br><br>";        
+     echo "</div>";
+     echo "</div>";
+     echo "</div>";
+     echo "</div>";
+     echo "</div>";
+     echo "</div>";
+
+     echo "</div>";
+
+   }
+
+   ?> 
 
 
 
-</h2>
-	<?php
-	
-	require'./dbConnect.php';
-				$sql = "SELECT *FROM admien";
-				$result = mysqli_query($db, $sql);
-				
-				while($row = mysqli_fetch_array($result)){
-				
-				
-					echo "<div class='ui1'>";
-						
-							echo "<div class='ui1_box'>";
-								echo "<div class='ui1_box__inner'>";
-									
-									echo "<img src = 'name/".$row['Image']."' width='250px' height='250px;'> 
-									<div id='inner'>";
-									echo "<p>".$row['Header']."</h2><p>";
-										echo "<p>".$row['Detail']."</p>";
-										
-										echo "</div><br><br>";
-								
-										
-								
-								echo "</div>";
-							echo "</div>";
-						
-					echo "</div>";
-						
-					
-				}
-			
-			?> 
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="JS/slider.js"></script>
-  <script src="JS/textBox.js"></script>
-</body>
 
-</html>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   <script src="JS/slider.js"></script>
+   <script src="JS/textBox.js"></script>
+ </body>
+
+ </html>
