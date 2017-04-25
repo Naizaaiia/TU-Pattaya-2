@@ -14,7 +14,6 @@
 	$Detail3 =$_POST['Detail3'];
 	$Detail4 =$_POST['Detail4'];
 	$Detail5 =$_POST['Detail5'];
-
 	$id_select=$_POST['id_select'];
 	$sql="update soften set Image="."'$Image',Header1='$Header1',Header2='$Header2',Header3='$Header3',Header4='$Header4',Header5='$Header5',Header6='$Header6',Detail1='$Detail1',Detail2='$Detail2',Detail3='$Detail3',Detail4='$Detail4',Detail5='$Detail5' where id=$id_select";
 	$result=mysqli_query($con,$sql);
