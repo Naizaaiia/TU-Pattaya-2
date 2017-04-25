@@ -18,7 +18,6 @@
 	$id_select=$_POST['id_select'];
 	$sql="update autoen set Image="."'$Image',Header1='$Header1',Header2='$Header2',Header3='$Header3',Header4='$Header4',Header5='$Header5',Header6='$Header6',Detail1='$Detail1',Detail2='$Detail2',Detail3='$Detail3',Detail4='$Detail4',Detail5='$Detail5' where id=$id_select";
 	$result=mysqli_query($con,$sql);
-	
 	if($result){
 	echo"success";
 	echo "<script> window.location.assign('TableAutoEN.php'); </script>";

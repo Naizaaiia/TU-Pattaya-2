@@ -17,11 +17,11 @@
         <br><img src="image/iconTU.jpg" style="width: 70px;height: 70px;">
       </a>
     <div class="langTH">
-      <a href="HistoryTH.php">
+      <a href="ProgramSoftTH.php">
         <img src="image/iconTH2.png" alt="Thailand" style="width: 40px;height: 30px;">
       </a>
       <div class="langEN">
-        <a href="HistoryEN.php">
+        <a href="ProgramSoftEN.php">
           <img src="image/iconEN2.png" alt="Thailand" style="width: 40px;height: 30px;">
       </a>
       </div>
@@ -35,7 +35,7 @@
   <a href="DepartmentEN.php" class="nav">DEPARTMENT</a>
 
   <li class="dropdown" >
-    <a class="nav" >PROGRAMS</a>
+    <a class="navi" >PROGRAMS</a>
     <div class="dropdown-content" >
     <a href="ProgramSoftEN.php" >SOFTWARE ENGINEER</a>
     <a href="ProgramAutoEN.php" >AUTOMOTIVE ENGINEER</a>
@@ -45,7 +45,7 @@
   <a href="Student'sLifeEN.php" class="nav">STUDENT'S LIFE</a>
 
   <li class="dropdown">
-    <a class="navi">ABOUT</a>
+    <a class="nav">ABOUT</a>
     <div class="dropdown-content" >
     <a href="HistoryEN.php" >HISTORY</a>
     <a href="AdminstrativeBoardEN.php" >ADMINSTRATIVE BOARD</a>
@@ -82,35 +82,55 @@
     </div>
   </div>
   <!--End Slider-->
-<?php
+
+  <!--Text box-->
+  <main>
+  
+  <input id="tab1" type="radio" name="tabs" checked>
+  <label for="tab1">ข้อมูลทั่วไป</label>
+    
+  <input id="tab2" type="radio" name="tabs">
+  <label for="tab2">หลักสูตร</label>
+    
+  <input id="tab3" type="radio" name="tabs">
+  <label for="tab3">แผนการเรียน</label>
+    
+  <input id="tab4" type="radio" name="tabs">
+ <label for="tab4"><a href="http://tupine.engr.tu.ac.th/course.php?id=6">ตารางสอน/ตารางสอบ</a></label>
+    
+  <?php
 	
-	require'./dbConnect.php';
-				$sql = "SELECT *FROM histen";
+require'./dbConnect.php';
+				$sql = "SELECT *FROM autoen";
 				$result = mysqli_query($db, $sql);
 				
 				while(($row = mysqli_fetch_array($result))){
 				
 				
-					echo "<div class='ui1'>";
-						echo "<div class='ui1_box'>";
-							echo "<div class='ui1_box__inner'>";
-							echo "<h2>".$row['Header']."</h2><br>";
-						
-						echo "<p>".$row['Detail']."</p><br><br>";
-						
-						echo "</div>";
-						echo "</div>";
-						echo "</div>";
-						
+					echo "<section id='content1'>";
+						echo "<center><h2>".$row['Header1']."</h2></center><br>";
+						echo "<h2>".$row['Header2']."</h2><br>";
+						echo "<p>".$row['Detail1']."</p></section>";
+					echo "<section id='content2'>";
+
+						echo "<h2>".$row['Header3']."</h2><br>";
+						echo "<p>".$row['Detail2']."</p></section>";
+					echo "<section id='content3'>";
+						echo "<center><h2>".$row['Header4']."</h2></center><br>";
+						echo "<img src = 'name/".$row['Image']."' width='700px''></section><br>";
+					
 					
 				}
+				
 			?> 
+			
+</main>
+  <!--Text box-->
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="JS/slider.js"></script>
   <script src="JS/textBox.js"></script>
-
-
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <script src="JS/textBoxProgram.js"></script>
 </body>
 
 </html>

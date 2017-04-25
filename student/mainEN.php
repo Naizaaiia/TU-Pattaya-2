@@ -86,7 +86,7 @@
   <!--Text box-->
   <?php
 	
-	$db = mysqli_connect("localhost","root","","cn342");
+	require'./dbConnect.php';
 				$sql = "SELECT *FROM homeen";
 				$result = mysqli_query($db, $sql);
 				
@@ -97,7 +97,7 @@
 						echo "<div class='ui_box'>";
 							echo "<div class='ui_box__inner'>";
 							echo "<h2>".$row['Header']."</h2><br>";
-							echo "<img src = 'name/".$row['Image']."' width='200px''>";
+							echo "<center><img src = 'name/".$row['Image']."' width='200px''></center><br>";
 						echo "<p>".$row['Detail']."</p><br><br>";
 						echo "</div>";
 						echo "</div>";
