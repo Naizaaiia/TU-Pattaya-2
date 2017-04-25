@@ -9,54 +9,54 @@
 </head>
 <body>
 
-<!--manu bar-->
-<div class="tavi">
-  <div class="logoTU">
-    <a href="mainTH.php">
+  <!--manu bar-->
+  <div class="tavi">
+    <div class="logoTU">
+      <a href="mainTH.php">
         <br><img src="image/iconTU.jpg" style="width: 70px;height: 70px;">
       </a>
-    <div class="langTH">
-      <a href="DepartmentTH.php">
-        <img src="image/iconTH2.png" alt="Thailand" style="width: 40px;height: 30px;">
-      </a>
-      <div class="langEN">
-        <a href="DepartmentEN.php">
-          <img src="image/iconEN2.png" alt="Thailand" style="width: 40px;height: 30px;">
-      </a>
+      <div class="langTH">
+        <a href="DepartmentTH.php">
+          <img src="image/iconTH2.png" alt="Thailand" style="width: 40px;height: 30px;">
+        </a>
+        <div class="langEN">
+          <a href="DepartmentEN.php">
+            <img src="image/iconEN2.png" alt="Thailand" style="width: 40px;height: 30px;">
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-  <h6>คณะวิศวกรรมศาสตร์ มหาวิทยาลัยธรรมศาสตร์ ศูนย์พัทยา</h6>
-  <p class="ma">Faculty of Engineering Thammasart University Pattaya Campus</p>
+    <h6>คณะวิศวกรรมศาสตร์ มหาวิทยาลัยธรรมศาสตร์ ศูนย์พัทยา</h6>
+    <p class="ma">Faculty of Engineering Thammasart University Pattaya Campus</p>
 
-  <a href="NewandEventTH.php" class="selected">ข่าวสารและกิจกรรม</a>
+    <a href="NewandEventTH.php" class="selected">ข่าวสารและกิจกรรม</a>
 
-  <a href="DepartmentTH.php" class="navi">หน่วยงาน</a>
+    <a href="DepartmentTH.php" class="navi">หน่วยงาน</a>
 
-  <li class="dropdown" >
-    <a class="nav" >หลักสูตร</a>
-    <div class="dropdown-content" >
-    <a href="ProgramSoftTH.php" >วิศวกรรมซอฟต์แวร์</a>
-    <a href="ProgramAutoTH.php" >วิศวกรรมยานยนต์</a>
-    </div>
-  </li>
-
-  <a href="Student'sLifeTH.php" class="nav">ชีวิตนักศึกษา</a>
-
-  <li class="dropdown">
-    <a class="nav">เกี่ยวกับคณะ</a>
-    <div class="dropdown-content" >
-    <a href="HistoryTH.php" >ประวัติ</a>
-    <a href="AdminstrativeBoardTH.php" >ผู้บริหารคณะ</a>
-    <a href="AddressAndMapTH.php" >ที่อยู่เเละแผนที่</a>
-    </div>
+    <li class="dropdown" >
+      <a class="nav" >หลักสูตร</a>
+      <div class="dropdown-content" >
+        <a href="ProgramSoftTH.php" >วิศวกรรมซอฟต์แวร์</a>
+        <a href="ProgramAutoTH.php" >วิศวกรรมยานยนต์</a>
+      </div>
     </li>
 
-  <a href="mainTH.php" class="nav">หน้าหลัก</a>
- </div>
-<!--End manu bar-->
+    <a href="Student'sLifeTH.php" class="nav">ชีวิตนักศึกษา</a>
 
-<!--Slider-->
+    <li class="dropdown">
+      <a class="nav">เกี่ยวกับคณะ</a>
+      <div class="dropdown-content" >
+        <a href="HistoryTH.php" >ประวัติ</a>
+        <a href="AdminstrativeBoardTH.php" >ผู้บริหารคณะ</a>
+        <a href="AddressAndMapTH.php" >ที่อยู่เเละแผนที่</a>
+      </div>
+    </li>
+
+    <a href="mainTH.php" class="nav">หน้าหลัก</a>
+  </div>
+  <!--End manu bar-->
+
+  <!--Slider-->
   <div class="parent">
     <div class="slider">
       <ul class="slider-ul">
@@ -83,55 +83,44 @@
 
   <br><br><br><br><br>
   
-	<h2 class="depa">คณะผู้บริหาร</h2>
-	<?php
-	
-	$db = mysqli_connect("localhost","root","","cn342");
-				$sql = "SELECT *FROM depath";
-				$result = mysqli_query($db, $sql);
-				$css = 'TU-PattayaCss.css';
-        
-        while($row = mysqli_fetch_array($result)){
-        
-        
-          echo "<div class='ui1'>";           
-              echo "<div class='ui1_box'>";
-                echo "<div class='ui1_box__inner'>";
+  <h2 class="departmenteng1">หน่วยงาน</h2>
+  <?php
+  
+  require'./dbConnect.php';
+  $sql = "SELECT *FROM depath";
+  $result = mysqli_query($db, $sql);
+  
+  while($row = mysqli_fetch_array($result)){
+    
+    
+    echo "<div class='ui1'>";           
+    echo "<div class='ui1_box'>";
+    echo "<div class='ui1_box__inner'>";
+    
+    echo "<img class='departmentgalleryBox' src = 'name/".$row['Image']."' width='250px' height='250px;'>
+    <div class='departmenteng2'>";
 
-                  echo "<div id ='one'>";
-                     echo "<div class='departmenteng2'>";
-                  
-                       echo "<img class='departmentgalleryBox' src = 'name/".$row['Image']." align='left'> 
-                         <div id='inner'>";
+     echo "<p>".$row['Header']."</p><br>";
+     echo "<p>".$row['Detail']."</p>";
+     
+     echo "</div><br><br>";        
+     echo "</div>";
+     echo "</div>";
+     echo "</div>";
+     echo "</div>";
+     echo "</div>";
+     echo "</div>";
+     
+     echo "</div>";
+     
+     
+   }
+   
+   ?> 
 
-                           echo "<p>".$row['Header']."</p><br>";
-                              echo "<p>".$row['Detail']."</p>";
-                    
-                              echo "</div><br><br>";        
-                            echo "</div>";
-                        echo "</div>";
-                      echo "</div>";
-                  echo "</div>";
-                echo "</div>";
-              echo "</div>";
-            
-          echo "</div>";
-						
-					
-				}
-			
-			?> 
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   <script src="JS/slider.js"></script>
+   <script src="JS/textBox.js"></script>
+ </body>
 
-
-
-
-
-
-
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="JS/slider.js"></script>
-  <script src="JS/textBox.js"></script>
-</body>
-
-</html>
+ </html>
