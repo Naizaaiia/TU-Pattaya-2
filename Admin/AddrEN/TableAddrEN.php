@@ -1,6 +1,9 @@
 <?php
 	require'../Connect/dbConnect.php';
+
+	include("../LoginHome/check.php");	
 	
+
 	$sql="select * from addren";
 	$result= mysqli_query($con,$sql);
 ?>
@@ -34,7 +37,7 @@
   <li><a href="../DepaEN/TableDepaEN.php">DepartmentEN</a></li>
   <li><a href="../NewTH/TableNewTH.php">NewandEventTH</a></li>
   <li><a href="../NewEN/TableNewEN.php">NewandEventEN</a></li>
-  <li><a href="../LoginHome/Index.php">Logout</a></li>
+  <li><a href="../LoginHome/logout.php">Logout</a></li>
   
 </ul>
 
