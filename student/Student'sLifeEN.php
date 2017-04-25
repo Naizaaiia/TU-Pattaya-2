@@ -82,7 +82,7 @@
   <!--End Slider-->
 <?php
 	
-	$db = mysqli_connect("localhost","root","","cn342");
+	require'./dbConnect.php';
 				$sql = "SELECT *FROM studen";
 				$result = mysqli_query($db, $sql);
 				
@@ -90,14 +90,21 @@
 				
 				
 					echo "<div class='ui'>";
-						echo "<div class='ui_box'>";
-							echo "<div class='ui_box__inner'>";
-							echo "<h2>".$row['Header']."</h2><br>";
-							
-						echo "<pre><p>".$row['Detail']."</p></pre><br><br>";
-						echo "</div>";
-						echo "</div>";
-						echo "</div>";
+						
+							echo "<div class='ui_box'>";
+								echo "<div class='ui_box__inner'>";
+									echo "<h2>".$row['Header']."</h2><br>";
+									echo "<div id='inner'>";
+										echo "<p>".$row['Detail']."</p>";
+										
+										echo "</div><br><br>";
+								
+										
+								
+								echo "</div>";
+							echo "</div>";
+						
+					echo "</div>";
 						
 					
 				}
