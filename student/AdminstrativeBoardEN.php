@@ -82,36 +82,35 @@
   <!--End Slider-->
 
  	 <br><br><br><br>
-	<h2 class="admi">Administrators</h2>
+	<h2 class="admi">Administrators
+
+
+
+</h2>
 	<?php
 	
-	$db = mysqli_connect("localhost","root","","cn342");
+	require'./dbConnect.php';
 				$sql = "SELECT *FROM admien";
 				$result = mysqli_query($db, $sql);
-        $css = 'TU-PattayaCss.css';
 				
 				while($row = mysqli_fetch_array($result)){
 				
 				
-					echo "<div class='ui1'>";						
+					echo "<div class='ui1'>";
+						
 							echo "<div class='ui1_box'>";
 								echo "<div class='ui1_box__inner'>";
-
-                  echo "<div id ='one'>";
-                     echo "<div class='adminstrativethai2'>";
 									
-									     echo "<img class='galleryBox3' src = 'name/".$row['Image']." align='left'> 
-									       <div id='inner'>";
-
-									         echo "<p>".$row['Header']."</p><br>";
-										          echo "<p>".$row['Detail']."</p>";
+									echo "<img src = 'name/".$row['Image']."' width='250px' height='250px;'> 
+									<div id='inner'>";
+									echo "<p>".$row['Header']."</h2><p>";
+										echo "<p>".$row['Detail']."</p>";
 										
-										          echo "</div><br><br>";				
-                            echo "</div>";
-                        echo "</div>";
-                      echo "</div>";
-                  echo "</div>";
-                echo "</div>";
+										echo "</div><br><br>";
+								
+										
+								
+								echo "</div>";
 							echo "</div>";
 						
 					echo "</div>";
@@ -120,10 +119,6 @@
 				}
 			
 			?> 
-
-
-
-
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="JS/slider.js"></script>
