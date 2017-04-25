@@ -17,5 +17,4 @@
 		echo mysqli_error($con);
 	}
 	
-
 ?>
