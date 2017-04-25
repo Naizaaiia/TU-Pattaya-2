@@ -8,8 +8,7 @@
 
 	$id_select=$_POST['id_select'];
 	$sql="update Admien set Image="."'$Image',Header='$Header',Detail='$Detail' where id=$id_select";
-	$result=mysqli_query($con,$sql);
-	
+	$result=mysqli_query($con,$sql);	
 	if($result){
 	echo"success";
 	echo "<script> window.location.assign('TableAdmiEN.php'); </script>";
