@@ -82,36 +82,32 @@
   <br><br><br><br><br>
 	<?php
 	
-	$db = mysqli_connect("localhost","root","","cn342");
+	require'./dbConnect.php';
 				$sql = "SELECT *FROM depaen";
 				$result = mysqli_query($db, $sql);
-				$css = 'TU-PattayaCss.css';
-        
-        while($row = mysqli_fetch_array($result)){
-        
-        
-          echo "<div class='ui1'>";           
-              echo "<div class='ui1_box'>";
-                echo "<div class='ui1_box__inner'>";
-
-                  echo "<div id ='one'>";
-                     echo "<div class='departmenteng2'>";
-                  
-                       echo "<img class='departmentgalleryBox' src = 'name/".$row['Image']." align='left'> 
-                         <div id='inner'>";
-
-                           echo "<p>".$row['Header']."</p><br>";
-                              echo "<p>".$row['Detail']."</p>";
-                    
-                              echo "</div><br><br>";        
-                            echo "</div>";
-                        echo "</div>";
-                      echo "</div>";
-                  echo "</div>";
-                echo "</div>";
-              echo "</div>";
-            
-          echo "</div>";						
+				
+				while($row = mysqli_fetch_array($result)){
+				
+				
+					echo "<div class='ui1'>";
+						
+							echo "<div class='ui1_box'>";
+								echo "<div class='ui1_box__inner'>";
+									
+									echo "<img src = 'name/".$row['Image']."' width='250px' height='250px;'> 
+									<div id='inner'>";
+									echo "<p>".$row['Header']."</p><br>";
+										echo "<p>".$row['Detail']."</p>";
+										
+										echo "</div><br><br>";
+								
+										
+								
+								echo "</div>";
+							echo "</div>";
+						
+					echo "</div>";
+						
 					
 				}
 			
