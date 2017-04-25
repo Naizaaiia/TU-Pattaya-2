@@ -87,41 +87,39 @@
 	
 	
     <br><br><br><br>
-    
-	<h2 class="admi">คณะผู้บริหาร</h2>
+
+
+<h2 class="adminstrativethai1">คณะผู้บริหาร</h2>
+
 	<?php
 	
-	$db = mysqli_connect("localhost","root","","cn342");
+	require'./dbConnect.php';
 				$sql = "SELECT *FROM admith";
 				$result = mysqli_query($db, $sql);
-				$css = 'TU-PattayaCss.css';
+        $css = 'TU-PattayaCss.css';
         
         while($row = mysqli_fetch_array($result)){
         
         
-          echo "<div class='ui1'>";           
-              echo "<div class='ui1_box'>";
-                echo "<div class='ui1_box__inner'>";
+    echo "<div class='ui1'>";           
+    echo "<div class='ui1_box'>";
+    echo "<div class='ui1_box__inner'>";
 
-                  echo "<div id ='one'>";
-                     echo "<div class='adminstrativethai2'>";
-                  
-                       echo "<img class='galleryBox3' src = 'name/".$row['Image']." align='left'> 
-                         <div id='inner'>";
+    echo "<img class='galleryBox3' src = 'name/".$row['Image']."' width='250px' height='250px;'>
+    <div class='adminstrativethai2'>";
 
-                           echo "<p>".$row['Header']."</p><br>";
-                              echo "<p>".$row['Detail']."</p>";
-                    
-                              echo "</div><br><br>";        
-                            echo "</div>";
-                        echo "</div>";
-                      echo "</div>";
-                  echo "</div>";
-                echo "</div>";
-              echo "</div>";
-						
-					echo "</div>";
-						
+     echo "<p>".$row['Header']."</p><br>";
+     echo "<p>".$row['Detail']."</p>";
+
+     echo "</div><br><br>";        
+     echo "</div>";
+     echo "</div>";
+     echo "</div>";
+     echo "</div>";
+     echo "</div>";
+     echo "</div>";
+
+     echo "</div>";
 					
 				}
 			
