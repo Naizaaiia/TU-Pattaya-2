@@ -1,6 +1,7 @@
 <?php
 	$idSelect=$_GET['id'];
 	require'../Connect/dbConnect.php';
+	include("../LoginHome/check.php");	
 	$sql="select * from histth where id=$idSelect";
 	$result= mysqli_query($con,$sql);
 	$row=mysqli_fetch_assoc($result);
@@ -34,7 +35,7 @@
   <li><a href="../DepaEN/TableDepaEN.php">DepartmentEN</a></li>
   <li><a href="../NewTH/TableNewTH.php">NewandEventTH</a></li>
   <li><a href="../NewEN/TableNewEN.php">NewandEventEN</a></li>
-  
+  <li><a href="../LoginHome/logout.php">Logout</a></li>
 </ul>
 
 <div style="margin-left:25%;padding:1px 16px;height:1000px;">
