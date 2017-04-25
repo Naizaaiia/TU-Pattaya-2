@@ -3,58 +3,61 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Thammasart University Pattaya</title>
+  <title>มหาวิทยาลัยธรรมศาสตร์ ศูนย์พัทยา</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
   <link rel="stylesheet" href="CSS/TU-PattayaCSS.css" />
 </head>
+
 <body>
 
-<!--manu bar-->
-<div class="tavi">
-  <div class="logoTU">
-    <a href="mainEN.php">
+  <!--manu bar-->
+  <div class="tavi">
+    <div class="logoTU">
+      <a href="mainTH.php">
         <br><img src="image/iconTU.jpg" style="width: 70px;height: 70px;">
       </a>
-    <div class="langTH">
-      <a href="DepartmentTH.php">
-        <img src="image/iconTH2.png" alt="Thailand" style="width: 40px;height: 30px;">
-      </a>
-      <div class="langEN">
-        <a href="DepartmentEN.php">
-          <img src="image/iconEN2.png" alt="Thailand" style="width: 40px;height: 30px;">
-      </a>
+      <div class="langTH">
+        <a href="mainTH.php">
+          <img src="image/iconTH2.png" alt="Thailand" style="width: 40px;height: 30px;">
+        </a>
+        <div class="langEN">
+          <a href="mainEN.php">
+            <img src="image/iconEN2.png" alt="Thailand" style="width: 40px;height: 30px;">
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-  <h6>Faculty of Engineering Thammasart University Pattaya Campus</h6>
-  <p class="ma">คณะวิศวกรรมศาสตร์ มหาวิทยาลัยธรรมศาสตร์ ศูนย์พัทยา</p>
-<a href="NewandEventEN.php" class="selected">NEW AND EVENTS</a>
+    <h6>คณะวิศวกรรมศาสตร์ มหาวิทยาลัยธรรมศาสตร์ ศูนย์พัทยา</h6>
+    <p class="ma">Faculty of Engineering Thammasart University Pattaya Campus</p>
 
-  <a href="DepartmentEN.php" class="navi">DEPARTMENT</a>
+    <a href="NewandEventTH.php" class="selected">ข่าวสารและกิจกรรม</a>
 
-  <li class="dropdown" >
-    <a class="nav" >PROGRAMS</a>
-    <div class="dropdown-content" >
-    <a href="ProgramSoftEN.php" >SOFTWARE ENGINEER</a>
-    <a href="ProgramAutoEN.php" >AUTOMOTIVE ENGINEER</a>
-    </div>
-  </li>
+    <a href="DepartmentTH.php" class="nav">หน่วยงาน</a>
 
-  <a href="Student'sLifeEN.php" class="nav">STUDENT'S LIFE</a>
-
-  <li class="dropdown">
-    <a class="nav">ABOUT</a>
-    <div class="dropdown-content" >
-    <a href="HistoryEN.php" >HISTORY</a>
-    <a href="AdminstrativeBoardEN.php" >ADMINSTRATIVE BOARD</a>
-    <a href="AddressAndMapEN.php" >ADDRESS AND MAP</a>
-    </div>
+    <li class="dropdown" >
+      <a class="nav" >หลักสูตร</a>
+      <div class="dropdown-content" >
+        <a href="ProgramSoftTH.php" >วิศวกรรมซอฟต์แวร์</a>
+        <a href="ProgramAutoTH.php" >วิศวกรรมยานยนต์</a>
+      </div>
     </li>
 
-  <a href="mainEN.php" class="nav">HOME</a>
-  </div>
+    <a href="Student'sLifeTH.php" class="nav">ชีวิตนักศึกษา</a>
 
-<!--Slider-->
+    <li class="dropdown">
+      <a class="nav">เกี่ยวกับคณะ</a>
+      <div class="dropdown-content" >
+        <a href="HistoryTH.php" >ประวัติ</a>
+        <a href="AdminstrativeBoardTH.php" >ผู้บริหารคณะ</a>
+        <a href="AddressAndMapTH.php" >ที่อยู่เเละแผนที่</a>
+      </div>
+    </li>
+
+    <a href="mainTH.php" class="nav">หน้าหลัก</a>
+  </div>
+  <!--End manu bar-->
+
+  <!--Slider-->
   <div class="parent">
     <div class="slider">
       <ul class="slider-ul">
@@ -78,44 +81,35 @@
     </div>
   </div>
   <!--End Slider-->
+  <?php
+  require'./dbConnect.php';
+  $sql = "select*from newth ORDER BY id DESC";
 
-  <br><br><br><br><br>
-	<?php
-	
-	require'./dbConnect.php';
-				$sql = "SELECT *FROM depaen";
-				$result = mysqli_query($db, $sql);
-				
-				while($row = mysqli_fetch_array($result)){
-				
-				
-					echo "<div class='ui1'>";
-						
-							echo "<div class='ui1_box'>";
-								echo "<div class='ui1_box__inner'>";
-									
-									echo "<img src = 'name/".$row['Image']."' width='250px' height='250px;'> 
-									<div id='inner'>";
-									echo "<p>".$row['Header']."</p><br>";
-										echo "<p>".$row['Detail']."</p>";
-										
-										echo "</div><br><br>";
-								
-										
-								
-								echo "</div>";
-							echo "</div>";
-						
-					echo "</div>";
-						
-					
-				}
-			
-			?> 
+  $result = mysqli_query($db,$sql);
+  while($row = mysqli_fetch_array($result)){
+   if($_GET['IDnew']==$row['id']){
+    echo "<div>";
+    echo "<div class='ui1'>";
+    echo "<div class='ui1_box'>";
+    echo "<div class='ui1_box__inner'>";
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="JS/slider.js"></script>
-  <script src="JS/textBox.js"></script>
+    echo "<h1>".$row['Header']."</h1><br>";
+
+    echo "<center><img class='newsgalleryBox' src = 'name/".$row['Image']."'width='500px' height='500px;'></center><br><br>";
+
+    echo '<p>'.$row['Detail'].'</p>';
+
+    echo "</div>"; 	
+    echo "</div>"; 
+    echo "</div>"; 
+    echo "</div>"; 
+  }	
+}
+?>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="JS/slider.js"></script>
+<script src="JS/textBox.js"></script>
 </body>
 
 </html>
