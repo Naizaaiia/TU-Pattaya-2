@@ -97,130 +97,130 @@ a:hover
 }
 
 li a, .dropbtn {
-    display: inline-block;
-    color:black;
+  display: inline-block;
+  color:black;
 }
 
 li a:hover, .dropdown:hover .dropbtn {
-    background-color: white;
+  background-color: white;
 }
 
 li.dropdown {
-    display: inline-block;
-    float: right;
+  display: inline-block;
+  float: right;
 }
 
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    margin-top: 20px;
-    z-index: 1;
+  display: none;
+  position: absolute;
+  background-color: white;
+  margin-top: 20px;
+  z-index: 1;
   
 }
 
 .dropdown-content a {
-    color: red;
-    padding: 12px;
-    font-size: 12px;
-    text-decoration: none;
-    display: block;
-    color:black;
+  color: red;
+  padding: 12px;
+  font-size: 12px;
+  text-decoration: none;
+  display: block;
+  color:black;
 }
 
 .dropdown-content a:hover {background-color: white;}
 
 .dropdown:hover .dropdown-content {
-    display: block;
+  display: block;
 }
 /* End manu bar */
 
 /* Start General */
 * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    margin: 0;
-    padding: 0
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  margin: 0;
+  padding: 0
 }
 ul, ol {
-    list-style: none
+  list-style: none
 }
 .parent {
 
-    width: 75%;
-    margin: auto;
-    overflow: hidden;
-    color: #fff
+  width: 75%;
+  margin: auto;
+  overflow: hidden;
+  color: #fff
 }
 /* End General */
- 
+
 /* Start Slider */
 .slider {
-    position: relative;
+  position: relative;
 }
 .slider .slider-ul {
-    padding: 0;
-    display: flex;
+  padding: 0;
+  display: flex;
 }
 .slider .slider-ul .slider-ul-li {
-    background-size: cover;
+  background-size: cover;
 }
 .slider .slider-ul .slider-ul-li:first-of-type, .slider .slider-ul .slider-ul-li:last-of-type {
-    background-image: url(http://www.siammotors.com/uploads/gallery/17/1456298217.jpg)
+  background-image: url(http://www.siammotors.com/uploads/gallery/17/1456298217.jpg)
 }
 .slider .slider-ul .slider-ul-li:nth-of-type(2) {
-    background-image: url(http://www.admissionpremium.com/uploads/contents/20160602124944.jpg)
+  background-image: url(http://www.admissionpremium.com/uploads/contents/20160602124944.jpg)
 }
 .slider .slider-ul .slider-ul-li:nth-of-type(3) {
-    background-image: url(http://static.panoramio.com/photos/large/73806083.jpg)
+  background-image: url(http://static.panoramio.com/photos/large/73806083.jpg)
 }
 .slider .slider-ul .slider-ul-li:nth-of-type(4) {
-    background-image: url(http://www.siammotors.com/uploads/gallery/17/1456298185.jpg)
+  background-image: url(http://www.siammotors.com/uploads/gallery/17/1456298185.jpg)
 }
 .slider .slider-ul .slider-ul-li:nth-of-type(5) {
-    background-image: url(http://www.siammotors.com/uploads/gallery/17/1456298199.jpg)
+  background-image: url(http://www.siammotors.com/uploads/gallery/17/1456298199.jpg)
 }
 .slider .slider-ol {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    bottom: 10px
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  bottom: 10px
 }
 .slider .slider-ol .slider-ol-li {
-    display: inline-block;
+  display: inline-block;
 }
 .slider .slider-ol .slider-ol-li:hover .fa:before, .slider .slider-ol .slider-ol-li.slider-active .fa:before {
-    content: "\f111";
+  content: "\f111";
 }
 .slider > .fa {
-    position: absolute;
-    top: 45%
+  position: absolute;
+  top: 45%
 }
 .slider > .fa:first-of-type { right: 5px}
 .slider > .fa:last-of-type { left: 5px}
 .slider .fa {
-    text-shadow: 5px 5px 5px #555;
-    cursor: pointer
+  text-shadow: 5px 5px 5px #555;
+  cursor: pointer
 }
 /* Start Slider */
 
 /* Start Media Query */
 @media(min-width: 100px) and (max-width: 767px) { /* X Small Screen */
-    .slider > .fa { font-size: 25px }
-    .slider .slider-ol .slider-ol-li { visibility: hidden }
+  .slider > .fa { font-size: 25px }
+  .slider .slider-ol .slider-ol-li { visibility: hidden }
 }
 @media(min-width: 768px) and (max-width: 991px) { /* Small Screen */
-    .slider > .fa { font-size: 50px }
-    .slider .slider-ol .slider-ol-li { visibility: hidden }
+  .slider > .fa { font-size: 50px }
+  .slider .slider-ol .slider-ol-li { visibility: hidden }
 }
 @media(min-width: 992px) and (max-width: 1199px) { /* Medium Screen */
-    .slider > .fa { font-size: 75px }
-    .slider .slider-ol .slider-ol-li { font-size: 17px }
+  .slider > .fa { font-size: 75px }
+  .slider .slider-ol .slider-ol-li { font-size: 17px }
 }
 @media(min-width: 1200px) { /* Larg Screen */
-    .slider > .fa { font-size: 100px }
-    .slider .slider-ol .slider-ol-li { font-size: 25px }
+  .slider > .fa { font-size: 100px }
+  .slider .slider-ol .slider-ol-li { font-size: 25px }
 }
 /* End Media Query */
 
@@ -256,7 +256,7 @@ body .ui .drop {
   -webkit-transition-property: bottom,opacity;
   transition-property: bottom,opacity;
   -webkit-transition-duration: .3s;
-          transition-duration: .3s;
+  transition-duration: .3s;
 }
 body .ui .drop p {
   color: #f8fbfa;
@@ -270,13 +270,13 @@ body .ui_box {
   box-shadow: -3px 0px rgba(255, 255, 255, 0.07);
   cursor: pointer;
   -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
   -webkit-transition-property: background,-webkit-transform;
   transition-property: background,-webkit-transform;
   transition-property: transform,background;
   transition-property: transform,background,-webkit-transform;
   -webkit-transition-duration: .3s;
-          transition-duration: .3s;
+  transition-duration: .3s;
 }
 body .ui_box__inner {
   padding: 30px;
@@ -302,13 +302,13 @@ body .ui_box p {
 body .ui_box:hover {
   background: #B22222;
   -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
   -webkit-transition-property: background,-webkit-transform;
   transition-property: background,-webkit-transform;
   transition-property: transform,background;
   transition-property: transform,background,-webkit-transform;
   -webkit-transition-duration: .3s;
-          transition-duration: .3s;
+  transition-duration: .3s;
   position: relative;
   z-index: 1;
 }
@@ -321,8 +321,8 @@ body .ui_box:hover {
   float: left;
 }
 .galleryBox {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 /* End Text box */
 
@@ -356,7 +356,7 @@ body .ui1 .drop {
   -webkit-transition-property: bottom,opacity;
   transition-property: bottom,opacity;
   -webkit-transition-duration: .3s;
-          transition-duration: .3s;
+  transition-duration: .3s;
 }
 body .ui1 .drop p {
   color: #f8fbfa;
@@ -370,13 +370,13 @@ body .ui1_box {
   box-shadow: -3px 0px rgba(255, 255, 255, 0.07);
   cursor: pointer;
   -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
   -webkit-transition-property: background,-webkit-transform;
   transition-property: background,-webkit-transform;
   transition-property: transform,background;
   transition-property: transform,background,-webkit-transform;
   -webkit-transition-duration: .3s;
-          transition-duration: .3s;
+  transition-duration: .3s;
 }
 body .ui1_box__inner {
   padding: 30px;
@@ -402,13 +402,13 @@ body .ui1_box p {
 body .ui1_box:hover {
   background: #B22222;
   -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
   -webkit-transition-property: background,-webkit-transform;
   transition-property: background,-webkit-transform;
   transition-property: transform,background;
   transition-property: transform,background,-webkit-transform;
   -webkit-transition-duration: .3s;
-          transition-duration: .3s;
+  transition-duration: .3s;
   position: relative;
   z-index: 1;
 }
@@ -421,30 +421,30 @@ body .ui1_box:hover {
   float: left;
 }
 .galleryBox1 {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 /* End Text box */
 
 /*AdminstrativeBoardEN Text box */
 
 .adminstrativethai1{
-  height:15%;
   float:left;
   padding: 10px;
-  margin: 10%;
+  margin: 10px;
+  padding-left:13%;
 }
 .adminstrativethai2{
-  height:32%;
-  float:left;
-  width:95%;
+  float:center;
   text-align: left;
   padding: 10px;
   margin: 10px;
 }
 .galleryBox3 {
-    width: 160px;
-    height: auto;
+  float:left;
+  width: 160px;
+  height: auto;
+  padding-bottom: 30px;
 }
 
 /* End Text box */
@@ -459,12 +459,12 @@ body .ui1_box:hover {
   padding: 10px;
   margin: 10px;
 }
-  
+
 /* End Text box */
 
 /* Text box Program */
 
- h1 {
+h1 {
   padding: 20px 0;
   font-weight: 400;
   color: Ivory;
@@ -532,23 +532,24 @@ input:checked + label {
 /* Department Text box*/
 
 .departmenteng1{
-	height:15%;
 	float:left;
 	padding: 10px;
 	margin: 10px;
+  padding-left:13%;
 
 }
 .departmenteng2{
-	height:32%;
-	float:left;
-	width:95%;
+	float:center;
 	text-align: left;
 	padding: 10px;
 	margin: 10px;
 }
 .departmentgalleryBox {
-    width: 160px;
-    height: auto;
+  float:left;
+  width: 160px;
+  height: auto;
+  padding-bottom: 30px;
+
 }
 /* Department End Text box*/
 
@@ -557,42 +558,49 @@ input:checked + label {
 .newsandeventgalleryBox {
   float: left;
   margin-bottom: 50px;
-    width: 20%;
-    height: auto;
+  width: 20%;
+  height: auto;
 } 
 /* NewsandEvent End Text box*/
 
 /* News Text box*/
 
 .newsgalleryBox {
-    width: 50%;
-    height: auto;
+  width: 50%;
+  height: auto;
 }
 /* News End Text box*/
 /*adminstrative and dapamentth and newandevent*/
 #inner{
-	  float: right;
-		margin-right: 20%;
-		width: 40%;
-		}
+ float: right;
+ width: 40%;
+}
 button{background-color: Transparent;
-            background-repeat:no-repeat;
-            border: none;
-            cursor:pointer;
-            overflow: hidden;
-			color: blue;
-			
-		}
-		.admi{
-		
-		padding-left:200px;
-	
-	}
-	.depa{
-		
-		padding-left:200px;
-	
-	}
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  color: blue;
+
+}
+.admi{
+
+  padding-left:200px;
+
+}
+.depa{
+
+  padding-left:200px;
+
+}
 /*adminstrative and dapamentth and newandevent*/
+/*ปรับขนาด*/
+.word {
+  width: 1em; 
+
+  word-wrap: break-word;
+}
+/*ปรับขนาด*/
+
 
 
