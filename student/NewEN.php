@@ -17,11 +17,11 @@
         <br><img src="image/iconTU.jpg" style="width: 70px;height: 70px;">
       </a>
     <div class="langTH">
-      <a href="NewTH1.php">
+      <a href="mainTH.php">
         <img src="image/iconTH2.png" alt="Thailand" style="width: 40px;height: 30px;">
       </a>
       <div class="langEN">
-        <a href="NewEN1.php">
+        <a href="mainEN.php">
           <img src="image/iconEN2.png" alt="Thailand" style="width: 40px;height: 30px;">
       </a>
       </div>
@@ -90,17 +90,20 @@ $result = mysqli_query($db,$sql);
 while($row = mysqli_fetch_array($result)){
 	if($_GET['IDnew']==$row['id']){
 		echo "<div>";
-		echo "<div class='ui1'>";
-		echo "<div class='ui1_box'>";
-		echo "<div class='ui1_box__inner'>";
-			echo "<h1>".$row['Header']."</h1><br>";
-			echo "<center><img src = 'name/".$row['Image']."'width='500px' height='500px;'></center>";
-			echo '<p>'.$row['Detail'].'</p>';
-			
-		echo "</div>"; 	
-		echo "</div>"; 
-		echo "</div>"; 
-		echo "</div>"; 
+    echo "<div class='ui1'>";
+    echo "<div class='ui1_box'>";
+    echo "<div class='ui1_box__inner'>";
+
+    echo "<h1>".$row['Header']."</h1><br>";
+
+    echo "<center><img class='newsgalleryBox' src = 'name/".$row['Image']."'width='500px' height='500px;'></center><br><br>";
+
+    echo '<p>'.$row['Detail'].'</p>';
+
+    echo "</div>";  
+    echo "</div>"; 
+    echo "</div>"; 
+    echo "</div>";
 	}	
 }
 ?>
