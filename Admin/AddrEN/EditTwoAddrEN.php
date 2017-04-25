@@ -2,7 +2,6 @@
 
 	require'../Connect/dbConnect.php';//เชื่อมต่อฐานข้อมูล
 	//รับค่าจากFormมาใส่ในฐานข้อมูล
-	
 	$Header =$_POST['Header'];
 	$Detail =$_POST['Detail'];
 
