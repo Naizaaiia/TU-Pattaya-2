@@ -6,7 +6,6 @@
 	if($result){
 	echo"success";
 	echo "<script> window.location.assign('TableStudEN.php'); </script>";
-		
 	}else{
 		echo"เกิดข้อผิดพลาด";
 	}
